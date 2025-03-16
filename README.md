@@ -21,9 +21,8 @@ This repository contains the code and resources necessary to reproduce the exper
 * JavaParser library
 ## Datasets
 This project uses the following datasets:
-* **Eclipse and Netbeans projects (Java):** These datasets were originally used in [cite the PARC paper]. Instructions on how to obtain and preprocess this dataset can be found [Netbeans](https://github.com/apache/netbeans/tree/54987ffb73ae9e17b23d4a43a23770142f93206b), [Eclipse](https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.17-202009021800/eclipse-platform-sources-4.17.tar.xz))
-.
-* **PY150 dataset (Python):** This dataset is publicly available at [provide link to the PY150 dataset]. We followed the preprocessing steps outlined in [cite the PY150 paper] with the following modifications [mention any specific modifications you made].
+* **Eclipse and Netbeans projects (Java):** These datasets were originally used in [cite the PARC paper]. Instructions on how to obtain and preprocess this dataset can be found [Netbeans](https://github.com/apache/netbeans/tree/54987ffb73ae9e17b23d4a43a23770142f93206b), [Eclipse](https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.17-202009021800/eclipse-platform-sources-4.17.tar.xz).
+* **PY150 dataset (Python):** This dataset is publicly available at [(https://huggingface.co/datasets/claudios/cubert_ETHPy150Open)]. 
 * **Unseen Java Data:** The unseen Java code was collected from projects and repositories published after October 2023. The list of these projects and the scripts used for collection are available in the `data/unseen_data` directory.
 
 Please ensure you have downloaded and preprocessed the datasets according to the provided instructions and place them in the appropriate directories as expected by the code.
