@@ -23,6 +23,18 @@ This repository contains the code and resources necessary to reproduce the exper
 This project uses the following datasets:
 * **Eclipse and Netbeans projects (Java):** These datasets were originally used in [cite the PARC paper]. Instructions on how to obtain and preprocess this dataset can be found [Netbeans](https://github.com/apache/netbeans/tree/54987ffb73ae9e17b23d4a43a23770142f93206b), [Eclipse](https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.17-202009021800/eclipse-platform-sources-4.17.tar.xz).
 * **PY150 dataset (Python):** This dataset is publicly available at [(https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/CodeCompletion-token/dataset/py150)]. 
-* **Unseen Java Data:** The unseen Java code was collected from projects and repositories published after October 2023, Due to size limits, the dataset has been uploaded to Google Drive. You can download the dataset using the following link:  [(https://drive.google.com/file/d/1QheSAfupFNCq_V4q4a4Mt8uHNDl_gpC2/view)]. 
+* **Unseen Java Data:** The unseen Java code was collected from projects and repositories published after October 2023, Due to size limits, the dataset has been uploaded to Google Drive. You can download the dataset using the following link:  [(https://drive.google.com/file/d/1QheSAfupFNCq_V4q4a4Mt8uHNDl_gpC2/view)].
+The Unseen Java Data in this folder structure :
+## Folder Structure
+```plaintext
+dataset/
+│
+│
+└── Unseen Dataset
+       ├── CLdata
+       ├── file1.java
+       ├── file2.java
+       └── ...  
+``` 
 
 Please ensure you have downloaded and preprocessed the datasets according to the provided instructions and place them in the appropriate directories as expected by the code.
