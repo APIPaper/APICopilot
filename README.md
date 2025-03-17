@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="BannerAPICopilot.jpg" alt="Banner Image" width="800">
+</p>
+
 # LLM-based API Argument Completion with Knowledge-Augmented Prompts
 This repository contains the code and resources necessary to reproduce the experimental results presented in the ICSE 2026 paper "LLM-based API Argument Completion with Knowledge-Augmented Prompts." Our paper introduces APICopilot, a novel approach that enhances LLM-based API argument completion using dynamically generated, context-rich prompts leveraging knowledge graphs and graph matching.
 ## Datasets
@@ -17,8 +21,6 @@ The Unseen Java Data in this folder structure :
 ### Folder Structure
 ```plaintext
 dataset/
-│
-│
 └── Unseen Dataset
        ├── CLdata
        ├── file1.java
