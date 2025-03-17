@@ -109,7 +109,7 @@ for LLM that generates the suggested arguments.
 #### 11. **ArgumentRecommender**
 - **`recommend_arguments(prompt)`**: Recommends arguments using LLM-based prediction.
 
-## Detailed Workflow of APICopilot
+## 🔄 Detailed Workflow of APICopilot
 
 1. **Dataset Preprocessing**:
    - The dataset is preprocessed to clean and normalize the code files.
