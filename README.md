@@ -33,7 +33,7 @@ Please ensure you have downloaded and preprocessed the datasets according to the
 # Baselines:
 The implemenation source codes of applied baseline i.e. CodeT5+, UniXcoder, ARist, ChatGPT-4o, Gemini 2.0 Flash and Llama 3 70B for API argument completion are availabel in following folder structure:
 <p align="center">
-  <img src="Baselines.png" alt="Banner Image" width="500" height="300">
+  <img src="Baselines.png" alt="Banner Image" width="500" height="250">
 </p>
 
 # APICopilot: Automated API Argument Completion Framework
