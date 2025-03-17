@@ -29,7 +29,7 @@ dataset/
 Please ensure you have downloaded and preprocessed the datasets according to the provided instructions and place them in the appropriate directories as expected by the code.
 
 # APICopilot: Automated API Argument Completion Framework
-![Overview of APICopilot](Main4.png)
+![Overview of APICopilot](Main4.PNG)
 ## Class Hierarchy and Main Functions
 
 ### Class Hierarchy
