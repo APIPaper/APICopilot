@@ -29,14 +29,27 @@ dataset/
 ``` 
 
 Please ensure you have downloaded and preprocessed the datasets according to the provided instructions and place them in the appropriate directories as expected by the code.
-# Baseline:
-The implemenation source codes of applied baseline i.e. CodeT5+, UniXcoder, ARist, ChatGPT-4o, Gemini 2.0 Flash and Llama 3 70B are availabel in following folder structure:
-![Reload Image Page to Show Image](Baselines.png)
-# APICopilot: Automated API Argument Completion Framework
-![Overview of APICopilot](Main4.PNG)
-## Class Hierarchy and Main Functions
+# Baselines:
+The implemenation source codes of applied baseline i.e. CodeT5+, UniXcoder, ARist, ChatGPT-4o, Gemini 2.0 Flash and Llama 3 70B for API argument completion are availabel in following folder structure:
+<p align="center">
+  <img src="Baselines.png" alt="Banner Image" width="800">
+</p>
 
-### Class Hierarchy
+# APICopilot: Automated API Argument Completion Framework
+<p align="center">
+  <img src="Main4.PNG" alt="Banner Image" width="800">
+</p>
+<p>
+  Given the preceding
+code with missing arguments, it retrieves similar code examples
+and extracts knowledge triples from them. These triples are used
+to construct KGs, and the approach leverages graph matching to
+identify syntactically and semantically similar subgraphs. These
+subgraphs and retrieved examples are incorporated into a prompt
+for LLM that generates the suggested arguments.
+</p>
+
+## Class Hierarchy 
 ```
 [APICopilot.Main]
 ├── [Preprocessing (Eclipse, NetBeans, PY150)]
@@ -94,34 +107,7 @@ The implemenation source codes of applied baseline i.e. CodeT5+, UniXcoder, ARis
 #### 11. **ArgumentRecommender**
 - **`recommend_arguments(prompt)`**: Recommends arguments using LLM-based prediction.
 
-## Flow of Information Between Objects
-
-1. **Preprocessing**:
-   - `APICopilot` initializes the appropriate preprocessor (`EclipsePreprocessing`, `NetBeansPreprocessing`, or `PY150Preprocessing`).
-   - The preprocessor preprocesses the dataset and returns preprocessed data.
-
-2. **Argument Extraction**:
-   - `APICopilot` uses `ARExtractor` to extract Argument Requests (ARs) from the preprocessed data.
-
-3. **Example Retrieval**:
-   - `APICopilot` uses `ExampleRetriever` to retrieve similar examples for each AR.
-
-4. **Knowledge Triple Extraction**:
-   - `APICopilot` uses `KnowledgeTripleExtractor` to extract knowledge triples from ARs and examples.
-
-5. **Knowledge Graph Construction**:
-   - `APICopilot` uses `KnowledgeGraphBuilder` to build knowledge graphs from the extracted triples.
-
-6. **Graph Matching**:
-   - `APICopilot` uses `GraphMatcher` to find isomorphic subgraphs in the knowledge graphs.
-
-7. **Prompt Generation**:
-   - `APICopilot` uses `PromptGenerator` to generate prompts for LLM-based argument completion.
-
-8. **Argument Recommendation**:
-   - `APICopilot` uses `ArgumentRecommender` to recommend arguments using LLM-based prediction.
-
-## Detailed Workflow
+## Detailed Workflow of APICopilot
 
 1. **Dataset Preprocessing**:
    - The dataset is preprocessed to clean and normalize the code files.
