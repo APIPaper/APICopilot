@@ -3,8 +3,7 @@
 Predicting missing API arguments using CodeT5+. It integrates preprocessing, argument extraction, and fine-tuning of CodeT5+ to provide accurate and context-aware argument recommendations.
 ```
 APICopilot/
-├── preprocessing/
-├── extraction/
+├── ARExtraction/
 ├── codet5/
 ├── main.py
 ├── requirements.txt
