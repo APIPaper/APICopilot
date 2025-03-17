@@ -5,7 +5,7 @@ Predicting missing API arguments using CodeT5+. It integrates preprocessing, arg
 APICopilot/
 ├── ARExtraction/
 ├── codet5/
-├── main.py
+├── Main.py
 ├── requirements.txt
 └── README.md
 ```
