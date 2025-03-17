@@ -27,7 +27,9 @@ dataset/
 ``` 
 
 Please ensure you have downloaded and preprocessed the datasets according to the provided instructions and place them in the appropriate directories as expected by the code.
-
+# Baseline:
+The implemenation source codes of applied baseline i.e. CodeT5+, UniXcoder, ARist, ChatGPT-4o, Gemini 2.0 Flash and Llama 3 70B are availabel in following folder structure:
+![Reload Image Page to Show Image](Baselines.png)
 # APICopilot: Automated API Argument Completion Framework
 ![Overview of APICopilot](Main4.PNG)
 ## Class Hierarchy and Main Functions
