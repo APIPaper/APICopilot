@@ -27,6 +27,144 @@ dataset/
 ``` 
 
 Please ensure you have downloaded and preprocessed the datasets according to the provided instructions and place them in the appropriate directories as expected by the code.
+
+# APICopilot: Automated API Argument Completion Framework
+
+## Class Hierarchy and Main Functions
+
+### Class Hierarchy
+```
+[APICopilot]
+├── [EclipsePreprocessing]
+├── [NetBeansPreprocessing]
+├── [PY150Preprocessing]
+├── [ARExtractor]
+├── [ExampleRetriever]
+├── [KnowledgeTripleExtractor]
+├── [KnowledgeGraphBuilder]
+├── [GraphMatcher]
+├── [PromptGenerator]
+└── [ArgumentRecommender]
+```
+
+### Main Functions of Each Class
+
+#### 1. **APICopilot**
+- **`__init__(dataset_type, dataset_path, openai_api_key)`**: Initializes the framework with dataset and OpenAI API key.
+- **`preprocess_dataset()`**: Preprocesses the dataset using the appropriate preprocessor.
+- **`extract_argument_requests()`**: Extracts Argument Requests (ARs) from preprocessed data.
+- **`retrieve_examples()`**: Retrieves similar examples for each AR.
+- **`extract_knowledge_triples()`**: Extracts knowledge triples from ARs and examples.
+- **`build_knowledge_graphs()`**: Builds knowledge graphs from knowledge triples.
+- **`perform_graph_matching()`**: Performs graph matching to find similar subgraphs.
+- **`generate_prompts()`**: Generates prompts for LLM-based argument completion.
+- **`recommend_arguments()`**: Recommends arguments using LLM-based prediction.
+- **`run_pipeline()`**: Runs the full APICopilot pipeline.
+
+#### 2. **EclipsePreprocessing**
+- **`preprocess()`**: Preprocesses Eclipse Java files.
+
+#### 3. **NetBeansPreprocessing**
+- **`preprocess()`**: Preprocesses NetBeans Java files.
+
+#### 4. **PY150Preprocessing**
+- **`preprocess()`**: Preprocesses PY150 Python files.
+
+#### 5. **ARExtractor**
+- **`extract_ar(preprocessed_data)`**: Extracts Argument Requests (ARs) from preprocessed data.
+
+#### 6. **ExampleRetriever**
+- **`retrieve_examples(ar)`**: Retrieves similar examples for a given AR.
+
+#### 7. **KnowledgeTripleExtractor**
+- **`extract_triples(ar)`**: Extracts knowledge triples from an AR.
+
+#### 8. **KnowledgeGraphBuilder**
+- **`build_g_input(ar_triples)`**: Builds the input knowledge graph.
+- **`build_kg_examples(example_triples)`**: Builds the example knowledge graph.
+
+#### 9. **GraphMatcher**
+- **`find_isomorphic_subgraphs(kg_input, kg_examples)`**: Finds isomorphic subgraphs in the knowledge graphs.
+
+#### 10. **PromptGenerator**
+- **`generate_prompt(ar, matched_subgraphs)`**: Generates a prompt for LLM-based argument completion.
+
+#### 11. **ArgumentRecommender**
+- **`recommend_arguments(prompt)`**: Recommends arguments using LLM-based prediction.
+
+## Flow of Information Between Objects
+
+1. **Preprocessing**:
+   - `APICopilot` initializes the appropriate preprocessor (`EclipsePreprocessing`, `NetBeansPreprocessing`, or `PY150Preprocessing`).
+   - The preprocessor preprocesses the dataset and returns preprocessed data.
+
+2. **Argument Extraction**:
+   - `APICopilot` uses `ARExtractor` to extract Argument Requests (ARs) from the preprocessed data.
+
+3. **Example Retrieval**:
+   - `APICopilot` uses `ExampleRetriever` to retrieve similar examples for each AR.
+
+4. **Knowledge Triple Extraction**:
+   - `APICopilot` uses `KnowledgeTripleExtractor` to extract knowledge triples from ARs and examples.
+
+5. **Knowledge Graph Construction**:
+   - `APICopilot` uses `KnowledgeGraphBuilder` to build knowledge graphs from the extracted triples.
+
+6. **Graph Matching**:
+   - `APICopilot` uses `GraphMatcher` to find isomorphic subgraphs in the knowledge graphs.
+
+7. **Prompt Generation**:
+   - `APICopilot` uses `PromptGenerator` to generate prompts for LLM-based argument completion.
+
+8. **Argument Recommendation**:
+   - `APICopilot` uses `ArgumentRecommender` to recommend arguments using LLM-based prediction.
+
+## Detailed Workflow
+
+1. **Dataset Preprocessing**:
+   - The dataset is preprocessed to clean and normalize the code files.
+   - The preprocessed data is passed to the `ARExtractor`.
+
+2. **Argument Request Extraction**:
+   - The `ARExtractor` identifies method calls and extracts arguments.
+   - The extracted ARs are passed to the `ExampleRetriever`.
+
+3. **Example Retrieval**:
+   - The `ExampleRetriever` retrieves similar examples for each AR.
+   - The retrieved examples are passed to the `KnowledgeTripleExtractor`.
+
+4. **Knowledge Triple Extraction**:
+   - The `KnowledgeTripleExtractor` extracts knowledge triples from ARs and examples.
+   - The extracted triples are passed to the `KnowledgeGraphBuilder`.
+
+5. **Knowledge Graph Construction**:
+   - The `KnowledgeGraphBuilder` constructs knowledge graphs from the triples.
+   - The constructed graphs are passed to the `GraphMatcher`.
+
+6. **Graph Matching**:
+   - The `GraphMatcher` finds isomorphic subgraphs in the knowledge graphs.
+   - The matched subgraphs are passed to the `PromptGenerator`.
+
+7. **Prompt Generation**:
+   - The `PromptGenerator` creates context-rich prompts for LLM-based argument completion.
+   - The generated prompts are passed to the `ArgumentRecommender`.
+
+8. **Argument Recommendation**:
+   - The `ArgumentRecommender` uses the LLM to predict missing arguments.
+   - The recommended arguments are returned to the `APICopilot` for final output.
+
+## Example Usage
+
+```python
+# Initialize APICopilot with Eclipse dataset
+api_copilot = APICopilot(
+    dataset_type="eclipse",
+    dataset_path="/path/to/eclipse/project",
+    openai_api_key="your-openai-api-key"
+)
+
+# Run the full pipeline
+api_copilot.run_pipeline()
 ### Prerequisites
 * Python 3.8+
 * Java Development Kit (JDK) 11+
@@ -45,4 +183,12 @@ Please ensure you have downloaded and preprocessed the datasets according to the
 * Hugging Face API token (if using Llama 3 from Hugging Face)
 * Eclipse JDT (for Java code preprocessing)
 * JavaParser library
-
+### Example Usage
+```
+api_copilot = APICopilot(
+    dataset_type="eclipse",
+    dataset_path="/path/to/eclipse/project",
+    openai_api_key="your-openai-api-key"
+)
+api_copilot.run_pipeline()
+```
