@@ -163,24 +163,59 @@ api_copilot = APICopilot(
 
 # Run the full pipeline
 api_copilot.run_pipeline()
-### Prerequisites
-* Python 3.8+
-* Java Development Kit (JDK) 11+
-* pip (Python package installer)
-* Required Python libraries (install using `pip install -r requirements.txt`):
-    ```
-    antlr4-python3-runtime==4.9.2
-    codellama==0.1.1
-    networkx==2.8.8
-    numpy==1.23.5
-    openai==0.27.8
-    torch==1.13.1
-    transformers==4.25.1
-* Access to the OpenAI API (for ChatGPT-4o)
-* Access to the Google Gemini API (for Gemini 2.0 Flash)
-* Hugging Face API token (if using Llama 3 from Hugging Face)
-* Eclipse JDT (for Java code preprocessing)
-* JavaParser library
+## Prerequisites
+
+Before running the APICopilot project, ensure you have the following installed:
+
+### 1. **Python Version**
+- Python 3.8 or higher is required. You can check your Python version by running:
+  ```bash
+  python --version
+```
+#### Dependencies
+Install the required dependencies using pip:
+```
+pip install -r requirements.txt
+```
+#### OpenAI API Key
+APICopilot uses OpenAI's GPT-4o for argument recommendation. You need an OpenAI API key.
+Set your API key as an environment variable:
+```
+export OPENAI_API_KEY="your-api-key-here"
+```
+#### Dataset
+Download and prepare your dataset (Eclipse, NetBeans, or PY150).
+Place the dataset in the appropriate directory and update the dataset_path in the code.
+#### Hardware Requirements
+A GPU is recommended for faster processing, especially for large datasets. Ensure you have at least 16GB of RAM for medium-sized projects.
+#### Environment Setup
+It is recommended to use a virtual environment to manage dependencies:
+```
+python -m venv apicopilot-env
+source apicopilot-env/bin/activate  # On Windows: apicopilot-env\Scripts\activate
+pip install -r requirements.txt
+```
+
+---
+
+### Explanation of Prerequisites
+
+1. **Python Version**: APICopilot uses modern Python features, so Python 3.8+ is required.
+2. **Dependencies**: The `requirements.txt` file lists all necessary libraries for preprocessing, graph construction, LLM integration, and visualization.
+3. **OpenAI API Key**: The project relies on OpenAI's GPT-4o for argument recommendation, so an API key is mandatory.
+4. **Dataset**: The project supports Eclipse, NetBeans, and PY150 datasets. Ensure the dataset is properly formatted and placed in the correct directory.
+5. **Hardware Requirements**: A GPU is recommended for faster processing, especially for large datasets or when using LLMs.
+6. **Optional Tools**: Tools like Graphviz and JDK are optional but useful for visualization and Java parsing.
+7. **Environment Setup**: Using a virtual environment ensures dependency isolation and avoids conflicts.
+8. **Dataset Preprocessing**: The preprocessing scripts assume a specific directory structure for datasets.
+9. **Testing**: Running tests ensures that all components are functioning correctly.
+
+This setup ensures that users can easily install and run the APICopilot project on their local machines.
+
+
+
+
+
 ### Example Usage
 ```
 api_copilot = APICopilot(
