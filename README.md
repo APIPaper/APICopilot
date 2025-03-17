@@ -34,10 +34,8 @@ Please ensure you have downloaded and preprocessed the datasets according to the
 
 ### Class Hierarchy
 ```
-[APICopilot]
-├── [EclipsePreprocessing]
-├── [NetBeansPreprocessing]
-├── [PY150Preprocessing]
+[APICopilot.Main]
+├── [Preprocessing (Eclipse, NetBeans, PY150)]
 ├── [ARExtractor]
 ├── [ExampleRetriever]
 ├── [KnowledgeTripleExtractor]
