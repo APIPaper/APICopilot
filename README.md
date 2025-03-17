@@ -53,7 +53,7 @@ for LLM that generates the suggested arguments.
 
 ## Class Hierarchy 
 ```
-[APICopilot.Main]
+📦[APICopilot.Main]
 ├── [Preprocessing (Eclipse, NetBeans, PY150)]
 ├── [ARExtractor]
 ├── [ExampleRetriever]
@@ -64,7 +64,7 @@ for LLM that generates the suggested arguments.
 └── [ArgumentRecommender]
 ```
 
-### Main Functions of Each Class
+### 🎯 Main Functions of Each Class
 
 #### 1. **APICopilot**
 - **`__init__(dataset_type, dataset_path, openai_api_key)`**: Initializes the framework with dataset and OpenAI API key.
@@ -143,7 +143,7 @@ for LLM that generates the suggested arguments.
    - The `ArgumentRecommender` uses the LLM to predict missing arguments.
    - The recommended arguments are returned to the `APICopilot` for final output.
 
-## Example Usage
+## 📝 Example Usage
 
 ```python
 # Initialize APICopilot with Eclipse dataset
@@ -164,12 +164,12 @@ Before running the APICopilot project, ensure you have the following installed:
   ```bash
   python --version
 ```
-#### Dependencies
+#### ⚙️ Dependencies
 Install the required dependencies using pip:
 ```
 pip install -r requirements.txt
 ```
-#### OpenAI API Key
+#### 🔑 OpenAI API Key
 APICopilot uses OpenAI's GPT-4o for argument recommendation. You need an OpenAI API key.
 Set your API key as an environment variable:
 ```
@@ -190,7 +190,7 @@ pip install -r requirements.txt
 
 ---
 
-### Explanation of Prerequisites
+### 📚 Explanation of Prerequisites
 
 1. **Python Version**: APICopilot uses modern Python features, so Python 3.8+ is required.
 2. **Dependencies**: The `requirements.txt` file lists all necessary libraries for preprocessing, graph construction, LLM integration, and visualization.
