@@ -211,17 +211,3 @@ pip install -r requirements.txt
 9. **Testing**: Running tests ensures that all components are functioning correctly.
 
 This setup ensures that users can easily install and run the APICopilot project on their local machines.
-
-
-
-
-
-### Example Usage
-```
-api_copilot = APICopilot(
-    dataset_type="eclipse",
-    dataset_path="/path/to/eclipse/project",
-    openai_api_key="your-openai-api-key"
-)
-api_copilot.run_pipeline()
-```
