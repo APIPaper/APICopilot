@@ -42,8 +42,8 @@ The implemenation source codes of applied baseline i.e. CodeT5+, UniXcoder, ARis
 </p>
 <p>
   
-## 🚀 Overview of appraoch   Given the preceding
-code with missing arguments, it retrieves similar code examples
+## 🚀 Overview of appraoch 
+Given the preceding code with missing arguments, it retrieves similar code examples
 and extracts knowledge triples from them. These triples are used
 to construct KGs, and the approach leverages graph matching to
 identify syntactically and semantically similar subgraphs. These
