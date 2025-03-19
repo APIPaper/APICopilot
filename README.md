@@ -2,7 +2,7 @@
   <img src="BannerAPICopilot.jpg" alt="Banner Image" width="1050">
 </p>
 
-#  _Replication Packages: LLM-based API Argument Completion with Knowledge-Augmented Prompts_
+#  Replication Packages: LLM-based API Argument Completion with Knowledge-Augmented Prompts
 ## 🚀 Overview 
 This repository contains the code and resources necessary to reproduce the experimental results presented in the ICSE 2026 paper "LLM-based API Argument Completion with Knowledge-Augmented Prompts." Our paper introduces APICopilot, a novel approach that enhances LLM-based API argument completion using dynamically generated, context-rich prompts leveraging knowledge graphs and graph matching.
 ## 📜 Datasets
