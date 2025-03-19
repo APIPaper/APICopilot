@@ -39,7 +39,7 @@ The implemenation source codes of applied baseline i.e. CodeT5+, UniXcoder, ARis
   <img src="Baselines.png" alt="Banner Image" width="500" height="250">
 </p>
 
-# Generated Prompts (To reproduce Results)
+# 📊 Generated Prompts (To reproduce Results)
 To make the results reproduceable without implementation of APICopilot. We have generated prompts i.e knowledge agumented prompts and few-shot prompts for ChatGPT, Gemini and Llama.
 ```text
 📂 APICopilot/
@@ -48,8 +48,8 @@ To make the results reproduceable without implementation of APICopilot. We have 
 │   └── 📜 Few-ShotGeneratedPrompts.json
 │   └── 📜 ARs_test.JSON
 ```
-**APICopilotGeneratedPrompts.JSON:** Prompts generated using the APICopilot approach, leveraging knowledge triples and similar examples from an API usage graph to enhance argument prediction.
-**Few-ShotGeneratedPrompts.JSON:** Prompts generated using a few-shot learning approach, providing relevant examples to guide argument prediction based on contextual similarities.
+**✅ APICopilotGeneratedPrompts.JSON:** Prompts generated using the APICopilot approach, leveraging knowledge triples and similar examples from an API usage graph to enhance argument prediction.
+**✅ Few-ShotGeneratedPrompts.JSON:** Prompts generated using a few-shot learning approach, providing relevant examples to guide argument prediction based on contextual similarities.
 # APICopilot: Automated API Argument Completion Framework
 <p align="center">
   <img src="Main4.PNG" alt="Banner Image" width="500" height="300">
