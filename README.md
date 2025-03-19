@@ -49,6 +49,7 @@ To ensure reproducibility without implementing APICopilot, we have generated pro
 │   └── 📜 ARs_test.JSON
 ```
 **✅ APICopilotGeneratedPrompts.JSON:** Prompts generated using the APICopilot approach, leveraging knowledge triples and similar examples from an API usage graph to enhance argument prediction.
+
 **✅ Few-ShotGeneratedPrompts.JSON:** Prompts generated using a few-shot learning approach, providing relevant examples to guide argument prediction based on contextual similarities.
 # Implementation of APICopilot
 <p align="center">
@@ -68,14 +69,14 @@ for LLM that generates the suggested arguments.
 ## Class Hierarchy 
 ```
 📦[APICopilot.Main]
-├── [Preprocessing (Eclipse, NetBeans, PY150)]
-├── [ARExtractor]
-├── [ExampleRetriever]
-├── [KnowledgeTripleExtractor]
-├── [KnowledgeGraphBuilder]
-├── [GraphMatcher]
-├── [PromptGenerator]
-└── [ArgumentRecommender]
+├── 📜 [Preprocessing (Eclipse, NetBeans, PY150)]
+├── 📜 [ARExtractor]
+├── 📜 [ExampleRetriever]
+├── 📜 [KnowledgeTripleExtractor]
+├── 📜 [KnowledgeGraphBuilder]
+├── 📜 [GraphMatcher]
+├── 📜 [PromptGenerator]
+└── 📜 [ArgumentRecommender]
 ```
 
 ### 🎯 Main Functions of Each Class
