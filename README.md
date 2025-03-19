@@ -50,13 +50,13 @@ To ensure reproducibility without implementing APICopilot, we have generated pro
 ```
 **✅ APICopilotGeneratedPrompts.JSON:** Prompts generated using the APICopilot approach, leveraging knowledge triples and similar examples from an API usage graph to enhance argument prediction.
 **✅ Few-ShotGeneratedPrompts.JSON:** Prompts generated using a few-shot learning approach, providing relevant examples to guide argument prediction based on contextual similarities.
-# APICopilot: Automated API Argument Completion Framework
+# Implementation of APICopilot
 <p align="center">
   <img src="Main4.PNG" alt="Banner Image" width="500" height="300">
 </p>
 <p>
   
-## 🚀 Overview of appraoch 
+## 🚀 Overview of APICopilot
 Given the preceding code with missing arguments, it retrieves similar code examples
 and extracts knowledge triples from them. These triples are used
 to construct KGs, and the approach leverages graph matching to
