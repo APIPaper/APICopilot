@@ -81,7 +81,7 @@ for LLM that generates the suggested arguments.
 
 ### 🎯 Main Functions of Each Class
 
-#### 1. **APICopilot**
+#### 1.📜 **APICopilot**
 - **`__init__(dataset_type, dataset_path, openai_api_key)`**: Initializes the framework with dataset and OpenAI API key.
 - **`preprocess_dataset()`**: Preprocesses the dataset using the appropriate preprocessor.
 - **`extract_argument_requests()`**: Extracts Argument Requests (ARs) from preprocessed data.
@@ -93,68 +93,68 @@ for LLM that generates the suggested arguments.
 - **`recommend_arguments()`**: Recommends arguments using LLM-based prediction.
 - **`run_pipeline()`**: Runs the full APICopilot pipeline.
 
-#### 2. **EclipsePreprocessing**
+#### 2.📜 **EclipsePreprocessing**
 - **`preprocess()`**: Preprocesses Eclipse Java files.
 
-#### 3. **NetBeansPreprocessing**
+#### 3.📜 **NetBeansPreprocessing**
 - **`preprocess()`**: Preprocesses NetBeans Java files.
 
-#### 4. **PY150Preprocessing**
+#### 4.📜 **PY150Preprocessing**
 - **`preprocess()`**: Preprocesses PY150 Python files.
 
-#### 5. **ARExtractor**
+#### 5.📜 **ARExtractor**
 - **`extract_ar(preprocessed_data)`**: Extracts Argument Requests (ARs) from preprocessed data.
 
-#### 6. **ExampleRetriever**
+#### 6.📜 **ExampleRetriever**
 - **`retrieve_examples(ar)`**: Retrieves similar examples for a given AR.
 
-#### 7. **KnowledgeTripleExtractor**
+#### 7.📜 **KnowledgeTripleExtractor**
 - **`extract_triples(ar)`**: Extracts knowledge triples from an AR.
 
-#### 8. **KnowledgeGraphBuilder**
+#### 8.📜 **KnowledgeGraphBuilder**
 - **`build_g_input(ar_triples)`**: Builds the input knowledge graph.
 - **`build_kg_examples(example_triples)`**: Builds the example knowledge graph.
 
-#### 9. **GraphMatcher**
+#### 9.📜 **GraphMatcher**
 - **`find_isomorphic_subgraphs(kg_input, kg_examples)`**: Finds isomorphic subgraphs in the knowledge graphs.
 
-#### 10. **PromptGenerator**
+#### 10.📜 **PromptGenerator**
 - **`generate_prompt(ar, matched_subgraphs)`**: Generates a prompt for LLM-based argument completion.
 
-#### 11. **ArgumentRecommender**
+#### 11.📜 **ArgumentRecommender**
 - **`recommend_arguments(prompt)`**: Recommends arguments using LLM-based prediction.
 
 ## 🔄 Detailed Workflow of APICopilot
 
-1. **Dataset Preprocessing**:
+1. 📜 **Dataset Preprocessing**:
    - The dataset is preprocessed to clean and normalize the code files.
    - The preprocessed data is passed to the `ARExtractor`.
 
-2. **Argument Request Extraction**:
+2. 📜 **Argument Request Extraction**:
    - The `ARExtractor` identifies method calls and extracts arguments.
    - The extracted ARs are passed to the `ExampleRetriever`.
 
-3. **Example Retrieval**:
+3. 📜 **Example Retrieval**:
    - The `ExampleRetriever` retrieves similar examples for each AR.
    - The retrieved examples are passed to the `KnowledgeTripleExtractor`.
 
-4. **Knowledge Triple Extraction**:
+4. 📜 **Knowledge Triple Extraction**:
    - The `KnowledgeTripleExtractor` extracts knowledge triples from ARs and examples.
    - The extracted triples are passed to the `KnowledgeGraphBuilder`.
 
-5. **Knowledge Graph Construction**:
+5. 📜 **Knowledge Graph Construction**:
    - The `KnowledgeGraphBuilder` constructs knowledge graphs from the triples.
    - The constructed graphs are passed to the `GraphMatcher`.
 
-6. **Graph Matching**:
+6. 📜 **Graph Matching**:
    - The `GraphMatcher` finds isomorphic subgraphs in the knowledge graphs.
    - The matched subgraphs are passed to the `PromptGenerator`.
 
-7. **Prompt Generation**:
+7. 📜 **Prompt Generation**:
    - The `PromptGenerator` creates context-rich prompts for LLM-based argument completion.
    - The generated prompts are passed to the `ArgumentRecommender`.
 
-8. **Argument Recommendation**:
+8. 📜 **Argument Recommendation**:
    - The `ArgumentRecommender` uses the LLM to predict missing arguments.
    - The recommended arguments are returned to the `APICopilot` for final output.
 
@@ -190,12 +190,12 @@ Set your API key as an environment variable:
 ```
 export OPENAI_API_KEY="your-api-key-here"
 ```
-#### Dataset
+#### 📚 Dataset
 Download and prepare your dataset (Eclipse, NetBeans, or PY150).
 Place the dataset in the appropriate directory and update the dataset_path in the code.
-#### Hardware Requirements
+#### ⚙️ Hardware Requirements
 A GPU is recommended for faster processing, especially for large datasets. Ensure you have at least 16GB of RAM for medium-sized projects.
-#### Environment Setup
+#### ⚙️ Environment Setup
 It is recommended to use a virtual environment to manage dependencies:
 ```
 python -m venv apicopilot-env
