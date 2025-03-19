@@ -40,7 +40,7 @@ The implemenation source codes of applied baseline i.e. CodeT5+, UniXcoder, ARis
 </p>
 
 # 📊 Generated Prompts (To reproduce Results)
-To make the results reproduceable without implementation of APICopilot. We have generated prompts i.e knowledge agumented prompts and few-shot prompts for ChatGPT, Gemini and Llama.
+To ensure reproducibility without implementing APICopilot, we have generated prompts, including knowledge-augmented and few-shot prompts, for ChatGPT, Gemini, and Llama.😊
 ```text
 📂 APICopilot/
 ├── 📂 GeneratedPrompts/
